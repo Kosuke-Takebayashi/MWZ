@@ -21,3 +21,10 @@ img {
     width: 500px;
     height: auto;;
 }
+
+.modal-close-button {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: aqua;
+}
