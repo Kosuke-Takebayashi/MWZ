@@ -24,7 +24,7 @@ img {
 .mwz-modal-img {
   width: 500px;
   height: auto;
-  overflow: hidden;
+  transition: .3s ease;
 }
 
 .modal-close-button {
