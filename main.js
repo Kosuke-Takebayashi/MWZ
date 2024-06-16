@@ -30,7 +30,7 @@ window.onload = function () {
 
     document.body.insertBefore(modal, null);
 
-    modalImg.addEventListener("mouseenter", createCanvas);
+    // modalImg.addEventListener("mouseenter", createCanvas);
 
     modalImg.addEventListener("mousemove", handleMouseMove);
 
@@ -83,7 +83,7 @@ window.onload = function () {
       canvasContainer.removeChild(canvas);
     });
 
-    function handleMouseMove(event) {
+    function showZoomArea() {
       const square = document.querySelector(".square");
       const container = document.querySelector(".mwz-modal-img-wrapper");
 
@@ -105,10 +105,6 @@ window.onload = function () {
       square.style.left = x - squareWidth / 2 + "px";
       square.style.top = y - squareHeight / 2 + "px";
 
-      
-
-      console.log("squareaWidth" + squareWidth);
-
       if (x + squareWidth / 2 > containerRight) {
         square.style.left = containerRight - squareWidth + "px";
       }
@@ -124,20 +120,24 @@ window.onload = function () {
       if (y - squareHeight / 2 < containerTop) {
         square.style.top = containerTop + "px";
       }
+    }
 
-      const containerWidth = containerRect.width;
-      const containerHeight = containerRect.height;
+    function handleMouseMove(event) {
+      showZoomArea();
 
-      const imageRect = modalImg.getBoundingClientRect();
-      const imageWidth = imageRect.width;
-      const imageHeight = imageRect.height;
+      // const containerWidth = containerRect.width;
+      // const containerHeight = containerRect.height;
 
-      const mouseX = event.pageX;
-      const mouseY = event.pageY;
+      // const imageRect = modalImg.getBoundingClientRect();
+      // const imageWidth = imageRect.width;
+      // const imageHeight = imageRect.height;
 
-      var img = new Image();
+      // const mouseX = event.pageX;
+      // const mouseY = event.pageY;
 
-      img.src = modalImg.src;
+      // var img = new Image();
+
+      // img.src = modalImg.src;
     }
   });
 };
