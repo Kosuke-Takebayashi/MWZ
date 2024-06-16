@@ -24,7 +24,7 @@ img {
 .mwz-modal-img {
   width: 500px;
   height: auto;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .modal-close-button {
@@ -32,4 +32,27 @@ img {
   width: 40px;
   height: 40px;
   background-color: aqua;
+}
+
+#canvasContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  width: 500px;
+  height: 3 00px;
+  overflow: hidden;
+}
+
+#canvasContainer canvas {
+  width: 100%;
+}
+
+.square {
+  position: absolute;
+  width: 150px; /* 正方形の一辺の長さ */
+  height: 150px; /* 正方形の一辺の長さ */
+  background-color: #f00; /* 背景色 */
+  pointer-events: none; /* 正方形上でのマウスイベントを無効にする */
+  z-index: 9999;
 }
